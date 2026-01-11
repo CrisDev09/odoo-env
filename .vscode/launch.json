@@ -1,0 +1,70 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Odoo: Just My Code",
+      "type": "debugpy",
+      "request": "launch",
+      "stopOnEntry": false,
+      "python": "/usr/bin/python3",
+      "program": "/usr/bin/odoo",
+      "args": [
+        "--config=/etc/odoo/odoo.conf",
+        "--dev=xml,qweb"
+      ],
+      "console": "integratedTerminal",
+      "justMyCode": true
+    },
+    {
+      "name": "Odoo: Full Debug",
+      "type": "debugpy",
+      "request": "launch",
+      "stopOnEntry": false,
+      "python": "/usr/bin/python3",
+      "program": "/usr/bin/odoo",
+      "args": [
+        "--config=/etc/odoo/odoo.conf",
+        "--dev=xml,qweb"
+      ],
+      "console": "integratedTerminal",
+      "justMyCode": false
+    },
+    // {
+    //   "name": "Odoo: Debug Tests",
+    //   "type": "debugpy",
+    //   "request": "launch",
+    //   "stopOnEntry": false,
+    //   "python": "/usr/bin/python3",
+    //   "program": "/usr/bin/odoo",
+    //   "args": [
+    //     "--config=/mnt/.devcontainer/config/odoo.conf",
+    //     "--database=test-db",
+    //     "--init=${env:MODULES_TO_TEST}",
+    //     "--test-tags=${env:MODULES_TO_TEST}",
+    //     "--stop-after-init",
+    //     "--no-http"
+    //   ],
+    //   "console": "integratedTerminal",
+    //   "justMyCode": false
+    // },
+    // {
+    //   "name": "Python file debug",
+    //   "type": "debugpy",
+    //   "request": "launch",
+    //   "program": "${file}",
+    //   "console": "integratedTerminal"
+    // },
+    // {
+    //   "name": "Odoo JS Debugger",
+    //   "request": "launch",
+    //   "type": "chrome",
+    //   "url": "http://odoo:8069/web?debug=assets",
+    //   "sourceMaps": true,
+    //   "webRoot": "${workspaceFolder}",
+    //   "sourceMapPathOverrides": {
+    //     "*": "${workspaceFolder}/*"
+    //   }
+    // }
+  ],
+  "compounds": []
+}
