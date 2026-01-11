@@ -28,3 +28,4 @@ control/docker-compose.yml
 # Project-specific ignores
 _bmad
 .gemini
+.devcontainer/addons
