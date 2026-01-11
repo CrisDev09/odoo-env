@@ -1,0 +1,26 @@
+# Ignore txt and zip under backups
+*/backups/*.zip
+*/backups/*.txt
+
+# Ignore Odoo deb packages
+*.deb
+
+# Ignore user projects
+projects/*
+!projects/.gitkeep
+
+# Ignore *.crt and *.key files
+**/certs/*.crt
+**/certs/*.key
+
+# Ignore ALL .env files everywhere
+.env
+*.env
+**/.env
+**/*.env
+
+# Ignore control docker compose config
+control/docker-compose.yml
+
+# Ignore all Odoo config files anywhere in the repo
+**/odoo.conf
