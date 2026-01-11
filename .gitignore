@@ -24,3 +24,7 @@ control/docker-compose.yml
 
 # Ignore all Odoo config files anywhere in the repo
 **/odoo.conf
+
+# Project-specific ignores
+_bmad
+.gemini
