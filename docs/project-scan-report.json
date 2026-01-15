@@ -1,6 +1,6 @@
 {
 "workflow_version": "1.2.0",
-"timestamps": {"started": "2026-01-15T00:00:00.000Z", "last_updated": "2026-01-15T00:00:00.000Z"},
+"timestamps": {"started": "2026-01-15T00:00:00.000Z", "last_updated": "2026-01-15T00:00:00.000Z", "completed": "2026-01-15T00:00:00.000Z"},
 "mode": "full_rescan",
 "scan_level": "deep",
 "completed_steps": [
@@ -10,9 +10,13 @@
     {"step": "step_4", "status": "completed", "timestamp": "2026-01-15T00:00:00.000Z", "summary": "Conditional analysis complete, 3 files written"},
     {"step": "step_5", "status": "completed", "timestamp": "2026-01-15T00:00:00.000Z", "summary": "Source tree documented"},
     {"step": "step_6", "status": "completed", "timestamp": "2026-01-15T00:00:00.000Z", "summary": "Dev/deployment guides written"},
-    {"step": "step_8", "status": "completed", "timestamp": "2026-01-15T00:00:00.000Z", "summary": "Architecture docs written for 1 part"}
+    {"step": "step_8", "status": "completed", "timestamp": "2026-01-15T00:00:00.000Z", "summary": "Architecture docs written for 1 part"},
+    {"step": "step_9", "status": "completed", "timestamp": "2026-01-15T00:00:00.000Z", "summary": "All supporting docs written"},
+    {"step": "step_10", "status": "completed", "timestamp": "2026-01-15T00:00:00.000Z", "summary": "Master index generated"},
+    {"step": "step_11", "status": "completed", "timestamp": "2026-01-15T00:00:00.000Z", "summary": "Validation and review complete"},
+    {"step": "step_12", "status": "completed", "timestamp": "2026-01-15T00:00:00.000Z", "summary": "Workflow complete"}
 ],
-"current_step": "step_9",
+"current_step": "completed",
 "findings": {
     "project_classification": {
         "repository_type": "monolith",
@@ -54,7 +58,10 @@
     "source-tree-analysis.md",
     "development-guide.md",
     "deployment-guide.md",
-    "architecture.md"
+    "architecture.md",
+    "project-overview.md",
+    "component-inventory.md",
+    "index.md"
 ],
 "project_root": "C:\\Users\\cacde\\projects\\cristian\\odoo-env",
 "output_folder": "C:\\Users\\cacde\\projects\\cristian\\odoo-env\\docs",

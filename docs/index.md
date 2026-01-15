@@ -1,28 +1,34 @@
-# Índice de Documentación del Proyecto
+# Project Documentation Index - odoo-env
 
-## Información General del Proyecto
+## Project Overview
 
-*   **Nombre del Proyecto:** odoo-env
-*   **Tipo de Repositorio:** Monolito
-*   **Tipo de Proyecto Principal:** Backend (Odoo)
-*   **Pila Tecnológica Primaria:** Odoo en Python
+*   **Type:** Monolith
+*   **Primary Language:** Python
+*   **Architecture:** Service/API-centric
 
-## Documentación Generada
+## Quick Reference
+
+*   **Tech Stack:** Odoo, Python, PostgreSQL, Docker, Docker Compose
+*   **Entry Point:** Defined by Docker Compose and Odoo configuration.
+*   **Architecture Pattern:** Service/API-centric, typical for Odoo applications.
+
+## Generated Documentation
 
 *   [Resumen del Proyecto](./project-overview.md)
-*   [Arquitectura](./architecture.md)
+*   [Arquitectura del Proyecto](./architecture.md)
 *   [Análisis del Árbol de Código Fuente](./source-tree-analysis.md)
 *   [Inventario de Componentes](./component-inventory.md)
 *   [Guía de Desarrollo](./development-guide.md)
 *   [Guía de Despliegue](./deployment-guide.md)
-*   [Contratos de API](./api-contracts-main.md)
+*   [Contratos API](./api-contracts-main.md)
 *   [Modelos de Datos](./data-models-main.md)
-*   [Guía de Contribución](./contribution-guide.md) _(To be generated)_
+*   [Análisis Completo](./comprehensive-analysis-main.md)
 
-## Documentación Existente Descubierta
+## Existing Documentation Discovered
 
 *   [.github/dependabot.yml](./.github/dependabot.yml)
+*   [Guía de Contribución](./contribution-guide.md)
 
-## Primeros Pasos
+## Getting Started
 
-Para comenzar a desarrollar en este proyecto, sigue la [Guía de Desarrollo](./development-guide.md).
+To get started with this project, please refer to the [Development Guide](./development-guide.md) for environment setup and basic operations.
