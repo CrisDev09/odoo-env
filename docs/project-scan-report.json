@@ -1,0 +1,62 @@
+{
+"workflow_version": "1.2.0",
+"timestamps": {"started": "2026-01-15T00:00:00.000Z", "last_updated": "2026-01-15T00:00:00.000Z"},
+"mode": "full_rescan",
+"scan_level": "deep",
+"completed_steps": [
+    {"step": "step_1", "status": "completed", "timestamp": "2026-01-15T00:00:00.000Z", "summary": "Classified as monolith with 1 part (Backend: Python/Odoo)"},
+    {"step": "step_2", "status": "completed", "timestamp": "2026-01-15T00:00:00.000Z", "summary": "Found 12 existing docs"},
+    {"step": "step_3", "status": "completed", "timestamp": "2026-01-15T00:00:00.000Z", "summary": "Tech stack: Odoo on Python"},
+    {"step": "step_4", "status": "completed", "timestamp": "2026-01-15T00:00:00.000Z", "summary": "Conditional analysis complete, 3 files written"},
+    {"step": "step_5", "status": "completed", "timestamp": "2026-01-15T00:00:00.000Z", "summary": "Source tree documented"},
+    {"step": "step_6", "status": "completed", "timestamp": "2026-01-15T00:00:00.000Z", "summary": "Dev/deployment guides written"},
+    {"step": "step_8", "status": "completed", "timestamp": "2026-01-15T00:00:00.000Z", "summary": "Architecture docs written for 1 part"}
+],
+"current_step": "step_9",
+"findings": {
+    "project_classification": {
+        "repository_type": "monolith",
+        "parts_count": 1
+    },
+    "existing_documentation_inventory": [
+        {"file_path": ".github/dependabot.yml", "file_type": "config", "part": "main"},
+        {"file_path": "docs/api-contracts-main.md", "file_type": "api", "part": "main"},
+        {"file_path": "docs/architecture.md", "file_type": "architecture", "part": "main"},
+        {"file_path": "docs/component-inventory.md", "file_type": "component_inventory", "part": "main"},
+        {"file_path": "docs/contribution-guide.md", "file_type": "contribution_guide", "part": "main"},
+        {"file_path": "docs/data-models-main.md", "file_type": "data_models", "part": "main"},
+        {"file_path": "docs/deployment-guide.md", "file_type": "deployment_guide", "part": "main"},
+        {"file_path": "docs/development-guide.md", "file_type": "development_guide", "part": "main"},
+        {"file_path": "docs/index.md", "file_type": "index", "part": "main"},
+        {"file_path": "docs/project-overview.md", "file_type": "project_overview", "part": "main"},
+        {"file_path": "docs/project-scan-report.json", "file_type": "scan_report", "part": "main"},
+        {"file_path": "docs/source-tree-analysis.md", "file_type": "source_tree_analysis", "part": "main"}
+    ],
+    "user_provided_context": "none",
+    "technology_stack": {
+        "main": {
+            "language": "Python",
+            "framework": "Odoo",
+            "database": "PostgreSQL",
+            "architecture_pattern": "service/API-centric",
+            "dependencies_summary": "Detected from requirements.txt"
+        }
+    }
+},
+"project_types": [
+    {"part_id": "main", "project_type_id": "backend", "display_name": "Backend"}
+],
+"outputs_generated": [
+    "project-scan-report.json",
+    "api-contracts-main.md",
+    "data-models-main.md",
+    "comprehensive-analysis-main.md",
+    "source-tree-analysis.md",
+    "development-guide.md",
+    "deployment-guide.md",
+    "architecture.md"
+],
+"project_root": "C:\\Users\\cacde\\projects\\cristian\\odoo-env",
+"output_folder": "C:\\Users\\cacde\\projects\\cristian\\odoo-env\\docs",
+"resume_instructions": "Starting from step 1"
+}
