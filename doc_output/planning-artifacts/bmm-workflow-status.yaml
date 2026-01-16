@@ -26,10 +26,11 @@ workflow_status:
   brainstorm-project: required
   research: optional
   product-brief: optional
-  prd: required
+  prd: C:\\Users\\cacde\\projects\\cristian\\odoo-env\\_bmad-output\\planning-artifacts\\prd.md
   create-ux-design: conditional
   create-architecture: required
   create-epics-and-stories: required
   test-design: optional
   implementation-readiness: required
   sprint-planning: required
+last_updated: "January 15, 2026"
