@@ -26,6 +26,6 @@ control/docker-compose.yml
 **/odoo.conf
 
 # Project-specific ignores
-_bmad
 .gemini
 .devcontainer/addons
+.env
