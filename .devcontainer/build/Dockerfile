@@ -69,12 +69,11 @@ RUN echo 'deb http://apt.postgresql.org/pub/repos/apt/ jammy-pgdg main' > /etc/a
     && rm -f /etc/apt/sources.list.d/pgdg.list \
     && rm -rf /var/lib/apt/lists/*
 
-# Install rtlcss (on Debian buster)
+# Install rtlcss
 RUN npm install -g rtlcss
 
-# Create the odoo user/group matching host uid/gid (usually 1000:1000)
-RUN deluser --remove-home ubuntu || true \
-    && addgroup --gid 1000 odoo \
+# Create the odoo user/group
+RUN addgroup --gid 1000 odoo \
     && adduser --home /home/odoo --shell /usr/bin/zsh --uid 1000 --gid 1000 odoo --quiet \
     && mkdir -p /home/odoo/.vscode-server \
     && chown -R odoo:odoo /home/odoo
@@ -83,17 +82,17 @@ RUN mkdir -p /var/lib/odoo/sessions \
     && chown -R odoo:odoo /var/lib/odoo
 
 # Install Odoo
-ENV ODOO_VERSION 17.0
-ARG ODOO_RELEASE=20251222
-ARG ODOO_SHA=89bedfe72d8d35aac19b03135ba8e7064e6862ab
-RUN curl -o odoo.deb -sSL http://nightly.odoo.com/${ODOO_VERSION}/nightly/deb/odoo_${ODOO_VERSION}.${ODOO_RELEASE}_all.deb \
+ARG ODOO_VERSION=17.0
+ARG ODOO_RELEASE=20240715
+ARG ODOO_SHA=554a9b9217b18ae265b38a6f9f305d76d353684a
+RUN curl -o odoo.deb -sSL "http://nightly.odoo.com/${ODOO_VERSION}/nightly/deb/odoo_${ODOO_VERSION}.${ODOO_RELEASE}_all.deb" \
     && echo "${ODOO_SHA} odoo.deb" | sha1sum -c - \
     && apt-get update \
     && apt-get -y install --no-install-recommends ./odoo.deb \
     && rm -rf /var/lib/apt/lists/* odoo.deb
 
 # Copy entrypoint script and Odoo configuration file
-# COPY ./entrypoint.sh /entrypoint.sh
+COPY ./entrypoint.sh /entrypoint.sh
 COPY ./config/odoo.conf /etc/odoo/odoo.conf
 
 # Set permissions and Mount /var/lib/odoo to allow restoring filestore and /mnt/extra-addons for users addons
@@ -108,9 +107,9 @@ EXPOSE 8069 8071 8072
 # Set the default config file
 ENV ODOO_RC /etc/odoo/odoo.conf
 
-# COPY ./wait-for-psql.py /usr/local/bin/wait-for-psql.py
+COPY ./wait-for-psql.py /usr/local/bin/wait-for-psql.py
 
 # Set default user when running the container
 USER odoo
 
-CMD ["odoo"]
+CMD ["/entrypoint.sh", "odoo"]

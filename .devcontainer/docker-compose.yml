@@ -10,7 +10,7 @@ services:
     ports:
       - "8069:8069"
     volumes:
-      - ../../:/opt/odoo/custom-addons
+      - ./addons:/mnt/extra-addons
     environment:
       - POSTGRES_HOST=db
       - POSTGRES_USER=${POSTGRES_USER}

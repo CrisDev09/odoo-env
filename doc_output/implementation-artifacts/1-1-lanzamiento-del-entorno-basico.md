@@ -1,6 +1,6 @@
 # Story 1.1: Lanzamiento del Entorno Básico
 
-**Estado:** `review`
+**Estado:** `done`
 **Épica:** [Épica 1: Entorno de Desarrollo Fundamental](file://C:\Users\cacde\projects\cristian\odoo-env\doc_output\planning-artifacts\epics.md)
 **Documento de Arquitectura:** [Architecture Decision Document](file://C:\Users\cacde\projects\cristian\odoo-env\doc_output\planning-artifacts\architecture.md)
 **PRD:** [Product Requirements Document (PRD) - odoo-env](file://C:\Users\cacde\projects\cristian\odoo-env\doc_output\planning-artifacts\prd.md)

@@ -5,11 +5,16 @@ import time
 import psycopg2
 
 # Obtiene la configuración de la base de datos desde variables de entorno
-db_host = os.environ.get("POSTGRES_HOST", "db")
-db_port = os.environ.get("POSTGRES_PORT", 5432)
-db_user = os.environ.get("POSTGRES_USER", "odoo")
-db_password = os.environ.get("POSTGRES_PASSWORD", "odoo")
-db_name = os.environ.get("POSTGRES_DB", "postgres")
+db_host = os.environ.get("POSTGRES_HOST")
+db_port = os.environ.get("POSTGRES_PORT")
+db_user = os.environ.get("POSTGRES_USER")
+db_password = os.environ.get("POSTGRES_PASSWORD")
+db_name = os.environ.get("POSTGRES_DB")
+
+if not all([db_host, db_port, db_user, db_password, db_name]):
+    print("Error: Una o más variables de entorno de la base de datos no están definidas.", file=sys.stderr)
+    print("Asegúrate de que POSTGRES_HOST, POSTGRES_PORT, POSTGRES_USER, POSTGRES_PASSWORD, y POSTGRES_DB están definidas.", file=sys.stderr)
+    sys.exit(1)
 
 # Número máximo de intentos y tiempo de espera
 max_attempts = 30
