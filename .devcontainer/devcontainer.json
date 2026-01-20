@@ -9,5 +9,6 @@
             "extensions": []
         }
     },
-    "postCreateCommand": "echo 'Bienvenido al entorno de desarrollo de Odoo!' > /home/odoo/welcome.txt"
+    "postCreateCommand": "echo 'Bienvenido al entorno de desarrollo de Odoo!' > /home/odoo/welcome.txt",
+    "initializeCommand": "cp -n ./.devcontainer/.env.example ./.devcontainer/.env"
 }

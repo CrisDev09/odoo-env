@@ -37,7 +37,7 @@ story_location: "C:\\Users\\cacde\\projects\\cristian\\odoo-env\\doc_output\\imp
 development_status:
   epic-1: in-progress
   1-1-lanzamiento-del-entorno-basico: done
-  1-2-configuracion-del-entorno: backlog
+  1-2-configuracion-del-entorno: done
   1-3-gestion-de-dependencias-de-python: backlog
   1-4-instalacion-automatica-de-extensiones-de-vs-code: backlog
   1-5-consistencia-multiplataforma: backlog

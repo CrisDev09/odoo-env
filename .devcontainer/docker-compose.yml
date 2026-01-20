@@ -11,7 +11,10 @@ services:
       - "8069:8069"
     volumes:
       - ./addons:/mnt/extra-addons
+    container_name: ${PROJECT_NAME}_odoo_1
     environment:
+      # Recommended Odoo version is 17.0
+      - ODOO_VERSION=${ODOO_VERSION}
       - POSTGRES_HOST=db
       - POSTGRES_USER=${POSTGRES_USER}
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
@@ -21,6 +24,7 @@ services:
     image: postgres:12
     ports:
       - "5432:5432"
+    container_name: ${PROJECT_NAME}_db_1
     environment:
       - POSTGRES_USER=${POSTGRES_USER}
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}

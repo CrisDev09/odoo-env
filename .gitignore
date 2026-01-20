@@ -14,10 +14,7 @@ projects/*
 **/certs/*.key
 
 # Ignore ALL .env files everywhere
-.env
-*.env
 **/.env
-**/*.env
 
 # Ignore control docker compose config
 control/docker-compose.yml
